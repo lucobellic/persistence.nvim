@@ -65,7 +65,7 @@ end
 function M.save()
   local tmp = vim.o.sessionoptions
   vim.o.sessionoptions = table.concat(Config.options.options, ",")
-  vim.cmd("mks! " .. e(M.current or M.get_current()))
+  vim.cmd("mks! " .. e(M.get_current()))
   vim.o.sessionoptions = tmp
 end
 
